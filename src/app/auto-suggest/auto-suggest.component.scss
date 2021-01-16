@@ -1,0 +1,46 @@
+$height: 20px;
+$border: 1px solid #cccccc;
+$backgroundColor: #ffffff;
+
+.dr-auto-suggest {
+  position: relative;
+
+  .auto-suggest-input {
+    border: $border;
+    background: $backgroundColor;
+    height: $height;
+    width: 100%;
+  }
+
+  .dropdown {
+    position: absolute;
+    padding: 5px;
+    top: $height+3;
+    right: 0;
+    left: 0;
+    border: $border;
+    min-height: 100px;
+    background: $backgroundColor;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        padding: 0;
+        margin: 0;
+        display: block;
+        line-height: 18px;
+        height: 18px;
+        cursor: pointer;
+
+        &:hover, &.selected {
+          background-color: aliceblue;
+        }
+      }
+    }
+
+  }
+}

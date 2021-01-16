@@ -1,0 +1,16 @@
+<div class="dr-auto-suggest">
+  <input type="text"
+         class="auto-suggest-input"
+         (keyup)="onKeyUp($event)"
+         (focus)="onFocusGained()"
+         (blur)="onFocusLost()"
+  >
+  <div class="dropdown">
+    <ul>
+      <li *ngFor="let person of persons;  index as i;" [className]="selectedIndex === i ? 'selected' : ''">
+        {{person.name}}
+      </li>
+    </ul>
+  </div>
+</div>
+
